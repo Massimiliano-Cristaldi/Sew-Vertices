@@ -44,6 +44,9 @@ class SewVerticesOperator(bpy.types.Operator):
         elif event.type in {'Z'} and event.ctrl:
             return {'PASS_THROUGH'}
         
+        elif event.type in {'NUMPAD_1', 'NUMPAD_2', 'NUMPAD_3', 'NUMPAD_4', 'NUMPAD_5', 'NUMPAD_6', 'NUMPAD_7', 'NUMPAD_8', 'NUMPAD_9'}:
+            return {'PASS_THROUGH'}
+        
         elif event.type == 'MIDDLEMOUSE' and event.value == 'PRESS':
             return {'PASS_THROUGH'}
 
@@ -68,14 +71,14 @@ class SewVerticesOperator(bpy.types.Operator):
             context.area.tag_redraw()
             return {'RUNNING_MODAL'}
         
-        elif event.type == 'WHEELUPMOUSE':
+        elif event.type == 'WHEELDOWNMOUSE':
             if event.shift:
                 self.radius = min(500, self.radius + 5)
                 context.area.tag_redraw()
                 return {'RUNNING_MODAL'}
             return {'PASS_THROUGH'}
 
-        elif event.type == 'WHEELDOWNMOUSE':
+        elif event.type == 'WHEELUPMOUSE':
             if event.shift:
                 self.radius = max(5, self.radius - 5)
                 context.area.tag_redraw()
