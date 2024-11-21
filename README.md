@@ -1,3 +1,5 @@
+[![Sew Vertices - Blender addon demo](https://img.youtube.com/vi/cc8NwDYefck/0.jpg)](https://www.youtube.com/watch?v=cc8NwDYefck)
+
 This is version 0.2 of my first Blender addon: Sew Vertices
 
 Sew vertices allows you to quickly merge at center all the vertices in a circle selection; to be more specific:
@@ -14,5 +16,3 @@ Feedback in general is greatly appreciated.
 Latest update: v0.2
 - Swapped SHIFT + MOUSE WHEEL UP and SHIFT + MOUSE WHEEL DOWN events so that selection tool's behavior is consistent with default Blender tools (e.g. proportional editing)
 - It is now possible to use numpad keys for orthographic view while modal is running
-
-Pictures and/or videos coming soon.
